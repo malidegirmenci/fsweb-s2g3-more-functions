@@ -64,6 +64,7 @@ function ortalamaBul(arrNum) {
   }
 }
 //console.log([])
+//console.log([4])
 //console.log(ortalamaBul([3,5,7,9]))
 /*
   GÖREV 3
@@ -85,10 +86,25 @@ function ortalamaBul(arrNum) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arr,cbfAverageArr) {
+  const average = cbfAverageArr(arr);
+  const averageOverArr = [];
+  if(arr.length === 0){
+    return null;
+  } else if(arr.length == 1){
+    return arr
+  }else{
+    arr.forEach(element => {
+      if(element>average){
+        averageOverArr.push(element)
+      }
+    });
+    return averageOverArr
+  }
 }
-
+//console.log(ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul))
+//console.log(ortalamadanBuyukleriBul([5], ortalamaBul))
+//console.log(ortalamadanBuyukleriBul([], ortalamaBul))
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
   console.log("Kodlar sorunsuz çalışıyor!");
