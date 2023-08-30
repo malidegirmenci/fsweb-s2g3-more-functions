@@ -32,6 +32,7 @@ function dosyaAdiniBul(path) {
   }else{
     return path
   }
+  
 }
 //console.log(dosyaAdiniBul(""))
 //console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
